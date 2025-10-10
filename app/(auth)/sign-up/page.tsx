@@ -11,6 +11,9 @@ import {
 } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import FooterLink from "@/components/forms/FooterLink";
+import { signUpWithEmail } from "@/lib/actions/auth.actions";
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 const SignUp = () => {
   const {
@@ -20,7 +23,23 @@ const SignUp = () => {
     formState: { errors, isSubmitting },
   } = useForm<SignUpFormData>();
 
-  const onSubmit: SubmitHandler<SignUpFormData> = (data) => console.log(data);
+  const router = useRouter();
+
+  const onSubmit: SubmitHandler<SignUpFormData> = async (data) => {
+    try {
+      const result = await signUpWithEmail(data);
+
+      if (result.success) router.push("/");
+    } catch (error) {
+      console.log(error);
+      toast.error("Sign up failed", {
+        description:
+          error instanceof Error
+            ? error.message
+            : "Failed to create an account",
+      });
+    }
+  };
 
   return (
     <>
