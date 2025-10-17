@@ -17,7 +17,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
           <Image
             src="/assets/icons/logo.svg"
             layout="responsive"
-            alt="Signalist logo"
+            alt="Fuloos Signalist logo"
             width={140}
             height={32}
             className="h-8 w-auto"
@@ -28,12 +28,12 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
       <section className="auth-right-section">
         <div className="z-10 relative lg:mt-4 lg:mb-16">
           <blockquote className="antiblockquote">
-            Signalist turned my watchlist into a winning list. The alerts are
-            spot-on, and I feel more confident making moves in the market
+            Fuloos Signalist turned my watchlist into a winning list. The alerts
+            are spot-on, and I feel more confident making moves in the market
           </blockquote>
           <div className="flex items-center justify-between">
             <div>
-              <cite className="auth-testimonial-author">- Ethan R.</cite>
+              <cite className="auth-testimonial-author">- Rashid J.</cite>
               <p className="max-md:text-xs text-gray-500">Retail Investor</p>
             </div>
             <div className="flex items-center gap-0.5">
