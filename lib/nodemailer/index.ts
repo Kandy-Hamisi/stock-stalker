@@ -23,7 +23,7 @@ export const sendWelcomeEmail = async ({
   );
 
   const mailOptions = {
-    from: `"Fuloos Signalisr" <hkandy2000@gmail.com>`,
+    from: `"Fuloos Signalist" <hkandy2000@gmail.com>`,
     to: email,
     subject: `Welcome to Fuloos Signalist - your stock market toolkit is ready!`,
     text: "Thanks for joining Fuloos Signalist",
